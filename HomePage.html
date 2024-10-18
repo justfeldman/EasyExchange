@@ -99,6 +99,12 @@
     form input[type="submit"]:hover {
       background-color: #0056b3;
     }
+    #filter {
+      margin-bottom: 30px;
+    }
+    #filter label, #filter input {
+      margin-right: 10px;
+    }
     @media screen and (max-width: 768px) {
       .listings {
         flex-direction: column;
@@ -108,6 +114,24 @@
       }
     }
   </style>
+  <script>
+    function filterListings() {
+      const maxPrice = document.getElementById('priceFilter').value;
+      const peopleFilter = document.getElementById('peopleFilter').value;
+      const listings = document.querySelectorAll('.listing');
+
+      listings.forEach(listing => {
+        const price = parseInt(listing.getAttribute('data-price'));
+        const people = parseInt(listing.getAttribute('data-people'));
+
+        if ((maxPrice && price > maxPrice) || (peopleFilter && people != peopleFilter)) {
+          listing.style.display = 'none';
+        } else {
+          listing.style.display = 'block';
+        }
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -119,6 +143,17 @@
     <a href="#listings">Listings</a>
     <a href="contact.html">Contact Us</a>
   </nav>
+
+  <section id="filter">
+    <h2>Filter Listings</h2>
+    <label for="priceFilter">Max Price ($):</label>
+    <input type="number" id="priceFilter" name="priceFilter">
+
+    <label for="peopleFilter">Number of People in House:</label>
+    <input type="number" id="peopleFilter" name="peopleFilter">
+
+    <button onclick="filterListings()">Apply Filters</button>
+  </section>
 
   <section id="listings">
     <h1>Available Rooms for Sublet</h1>
