@@ -12,39 +12,52 @@
       padding: 0;
       line-height: 1.6;
     }
+
     header {
       background-color: #007BFF;
-      color: white;
-      text-align: center;
       padding: 2em;
-      font-size: 2em;
+      text-align: center;
+      position: relative;
     }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
     nav {
       background-color: #333;
       padding: 1em;
       text-align: center;
     }
+
     nav a {
       color: #fff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       color: #f7c242;
     }
+
     section {
       padding: 30px;
       max-width: 1000px;
       margin: auto;
       text-align: center;
     }
+
     .listings {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: space-between;
     }
+
     .listing {
       background-color: #fff;
       padding: 15px;
@@ -53,6 +66,7 @@
       width: calc(50% - 20px);
       box-sizing: border-box;
     }
+
     .listing img {
       width: 100%;
       height: 300px;
@@ -60,6 +74,7 @@
       margin: 20px 0;
       border-radius: 10px;
     }
+
     footer {
       background-color: #333;
       color: white;
@@ -69,6 +84,7 @@
       bottom: 0;
       width: 100%;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -79,16 +95,19 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
+
     form label {
       margin-bottom: 5px;
       font-weight: bold;
     }
+
     form input {
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     form input[type="submit"] {
       background-color: #007BFF;
       color: #fff;
@@ -96,48 +115,35 @@
       cursor: pointer;
       padding: 10px;
     }
+
     form input[type="submit"]:hover {
       background-color: #0056b3;
     }
+
     #filter {
       margin-bottom: 30px;
     }
+
     #filter label, #filter input {
       margin-right: 10px;
     }
+
     @media screen and (max-width: 768px) {
       .listings {
         flex-direction: column;
       }
+
       .listing {
         width: 100%;
       }
     }
   </style>
-  <script>
-    function filterListings() {
-      const maxPrice = document.getElementById('priceFilter').value;
-      const peopleFilter = document.getElementById('peopleFilter').value;
-      const listings = document.querySelectorAll('.listing');
-
-      listings.forEach(listing => {
-        const price = parseInt(listing.getAttribute('data-price'));
-        const people = parseInt(listing.getAttribute('data-people'));
-
-        if ((maxPrice && price > maxPrice) || (peopleFilter && people != peopleFilter)) {
-          listing.style.display = 'none';
-        } else {
-          listing.style.display = 'block';
-        }
-      });
-    }
-  </script>
 </head>
 <body>
   <header>
-    UniRoom Marketplace<br>
-    "Handpicked University Room Sublets - Only the Best!"
+    <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
   </header>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#listings">Listings</a>
