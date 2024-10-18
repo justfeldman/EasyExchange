@@ -100,21 +100,11 @@
       background-color: #0056b3;
     }
     @media screen and (max-width: 768px) {
-      header {
-        font-size: 1.5em;
-        padding: 1.5em;
-      }
-      nav {
-        font-size: 0.9em;
-      }
       .listings {
         flex-direction: column;
       }
       .listing {
         width: 100%;
-      }
-      form {
-        width: 90%;
       }
     }
   </style>
@@ -132,8 +122,20 @@
 
   <section id="listings">
     <h1>Available Rooms for Sublet</h1>
-    <div class="listings">
-      <div class="listing">
+    
+    <!-- Filter Section -->
+    <div>
+      <label for="priceFilter">Max Price:</label>
+      <input type="number" id="priceFilter" placeholder="Enter max price">
+      
+      <label for="peopleFilter">Number of People:</label>
+      <input type="number" id="peopleFilter" placeholder="Enter number of people">
+      
+      <button onclick="filterListings()">Apply Filters</button>
+    </div>
+    
+    <div class="listings" id="listingsContainer">
+      <div class="listing" data-price="700" data-people="4">
         <img src="unnamed.jpg" alt="University room available for sublet">
         <p><strong>Price:</strong> $700/month</p>
         <p><strong>Number of People Living in House:</strong> 4</p>
@@ -156,7 +158,7 @@
         </form>
       </div>
 
-      <div class="listing">
+      <div class="listing" data-price="750" data-people="3">
         <img src="Kylesroom.jpg" alt="Another university room available for sublet">
         <p><strong>Price:</strong> $750/month</p>
         <p><strong>Number of People Living in House:</strong> 3</p>
@@ -184,5 +186,28 @@
   <footer>
     <p>&copy; 2024 UniRoom Marketplace. All rights reserved.</p>
   </footer>
+
+  <script>
+    function filterListings() {
+      const maxPrice = document.getElementById('priceFilter').value;
+      const numberOfPeople = document.getElementById('peopleFilter').value;
+
+      const listings = document.querySelectorAll('.listing');
+
+      listings.forEach(listing => {
+        const listingPrice = parseInt(listing.getAttribute('data-price'));
+        const listingPeople = parseInt(listing.getAttribute('data-people'));
+
+        let priceMatch = !maxPrice || listingPrice <= maxPrice;
+        let peopleMatch = !numberOfPeople || listingPeople == numberOfPeople;
+
+        if (priceMatch && peopleMatch) {
+          listing.style.display = 'block';
+        } else {
+          listing.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
