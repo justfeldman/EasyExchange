@@ -106,7 +106,7 @@
     <h1>Welcome to UniRoom Sublets</h1>
     <p>Your perfect solution to sublet your university room when you're not around.</p>
     <p class="catchphrases">"Got an internship? Let your room help you afford that summer road trip!"</p>
-    <img src="/images/student_room.jpg" alt="University student room">
+    <img src="/mnt/data/unnamed.jpg" alt="University room available for sublet" style="max-width:100%;height:auto;border-radius:8px;">
   </section>
 
   <section id="how-it-works">
