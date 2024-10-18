@@ -41,14 +41,14 @@
     }
     .listing {
       background-color: #fff;
-      padding: 20px;
+      padding: 15px;
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
     .listing img {
-      width: 100%;
-      max-width: 600px;
+      width: 90%;
+      max-width: 400px;
       margin: 20px 0;
       border-radius: 10px;
     }
@@ -64,7 +64,7 @@
     form {
       display: flex;
       flex-direction: column;
-      max-width: 400px;
+      max-width: 300px;
       margin: 20px auto;
       padding: 15px;
       background: #f9f9f9;
@@ -122,12 +122,35 @@
   <section id="listings">
     <h1>Available Rooms for Sublet</h1>
     <div class="listing">
-      <img src="unnamed.jpg" alt="University room available for sublet">
+      <img src="/mnt/data/unnamed.jpg" alt="University room available for sublet">
       <p><strong>Price:</strong> $700/month</p>
       <p><strong>Number of People Living in House:</strong> 4</p>
 
       <h3>If You Are Interested</h3>
-      <form action="https://formspree.io/f/xpwzzgzg" method="POST">
+      <form action="https://formspree.io/f/{your-form-id}" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="listing">
+      <img src="Kylesroom.jpg" alt="Another university room available for sublet">
+      <p><strong>Price:</strong> $750/month</p>
+      <p><strong>Number of People Living in House:</strong> 3</p>
+
+      <h3>If You Are Interested</h3>
+      <form action="https://formspree.io/f/{your-form-id}" method="POST">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
 
