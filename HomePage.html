@@ -117,23 +117,11 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#listings">Listings</a>
-    <a href="#contact">Contact Us</a>
+    <a href="contact.html">Contact Us</a>
   </nav>
 
   <section id="listings">
     <h1>Available Rooms for Sublet</h1>
-    
-    <!-- Filter Section -->
-    <div>
-      <label for="priceFilter">Max Price:</label>
-      <input type="number" id="priceFilter" placeholder="Enter max price">
-      
-      <label for="peopleFilter">Number of People:</label>
-      <input type="number" id="peopleFilter" placeholder="Enter number of people">
-      
-      <button onclick="filterListings()">Apply Filters</button>
-    </div>
-    
     <div class="listings" id="listingsContainer">
       <div class="listing" data-price="700" data-people="4">
         <img src="unnamed.jpg" alt="University room available for sublet">
@@ -186,28 +174,5 @@
   <footer>
     <p>&copy; 2024 UniRoom Marketplace. All rights reserved.</p>
   </footer>
-
-  <script>
-    function filterListings() {
-      const maxPrice = document.getElementById('priceFilter').value;
-      const numberOfPeople = document.getElementById('peopleFilter').value;
-
-      const listings = document.querySelectorAll('.listing');
-
-      listings.forEach(listing => {
-        const listingPrice = parseInt(listing.getAttribute('data-price'));
-        const listingPeople = parseInt(listing.getAttribute('data-people'));
-
-        let priceMatch = !maxPrice || listingPrice <= maxPrice;
-        let peopleMatch = !numberOfPeople || listingPeople == numberOfPeople;
-
-        if (priceMatch && peopleMatch) {
-          listing.style.display = 'block';
-        } else {
-          listing.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
