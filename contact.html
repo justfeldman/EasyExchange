@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us - UniRoom Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 2em;
+      font-size: 2em;
+    }
+    nav {
+      background-color: #333;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f7c242;
+    }
+    section {
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Contact Us - UniRoom Marketplace
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section>
+    <h1>Submit Your Room for Listing</h1>
+    <p>We are always looking for quality rooms to add to our marketplace. If you have a room you'd like to list, please fill out the form below:</p>
+    <form action="https://formspree.io/f/xldeeygp" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="location">Location of Room:</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="price">Price per Month:</label>
+      <input type="number" id="price" name="price" required>
+
+      <label for="people">Number of People in House:</label>
+      <input type="number" id="people" name="people" required>
+
+      <label for="photo">Photo of Room:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <input type="submit" value="Submit Room">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 UniRoom Marketplace. All rights reserved.</p>
+  </footer>
+</body>
+</html>
