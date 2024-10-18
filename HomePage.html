@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UniRoom Sublets</title>
+  <title>UniRoom Marketplace</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -38,16 +38,18 @@
       margin: auto;
       text-align: center;
     }
-    section img {
-      width: 80%;
-      max-width: 500px;
+    .listing {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .listing img {
+      width: 100%;
+      max-width: 600px;
       margin: 20px 0;
       border-radius: 10px;
-    }
-    .catchphrases {
-      font-style: italic;
-      color: #007BFF;
-      margin: 20px 0;
     }
     footer {
       background-color: #333;
@@ -61,10 +63,10 @@
     form {
       display: flex;
       flex-direction: column;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #fff;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
@@ -72,7 +74,7 @@
       margin-bottom: 5px;
       font-weight: bold;
     }
-    form input, form select, form textarea {
+    form input {
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
@@ -83,7 +85,7 @@
       color: #fff;
       border: none;
       cursor: pointer;
-      padding: 15px;
+      padding: 10px;
     }
     form input[type="submit"]:hover {
       background-color: #0056b3;
@@ -92,67 +94,43 @@
 </head>
 <body>
   <header>
-    UniRoom Sublets<br>
-    "Turn your empty room into cash while you ace that internship!"
+    UniRoom Marketplace<br>
+    "Handpicked University Room Sublets - Only the Best!"
   </header>
   <nav>
     <a href="#home">Home</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="#listings">Listings</a>
     <a href="#contact">Contact Us</a>
   </nav>
 
-  <section id="home">
-    <h1>Welcome to UniRoom Sublets</h1>
-    <p>Your perfect solution to sublet your university room when you're not around.</p>
-    <p class="catchphrases">"Got an internship? Let your room help you afford that summer road trip!"</p>
-    <img src="/mnt/data/unnamed.jpg" alt="University room available for sublet" style="max-width:100%;height:auto;border-radius:8px;">
-  </section>
+  <section id="listings">
+    <h1>Available Rooms for Sublet</h1>
+    <div class="listing">
+      <img src="/mnt/data/unnamed.jpg" alt="University room available for sublet">
+      <p><strong>Price:</strong> $700/month</p>
+      <p><strong>Number of People Living in House:</strong> 4</p>
 
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <p>We connect students looking for a temporary place to stay with students who have empty rooms.</p>
-    <p class="catchphrases">"Keep the room warm, keep the pockets warm!"</p>
-  </section>
+      <h3>If You Are Interested</h3>
+      <form action="https://formspree.io/f/xpwzzgzg" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
 
-  <section id="testimonials">
-    <h2>What Our Users Say</h2>
-    <p>"Subletting my room was easy and stress-free! I even made some friends along the way."</p>
-    <p class="catchphrases">"Your room is the key to making that summer break unforgettable!"</p>
-  </section>
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Got a question? We're here to help you find the perfect match.</p>
-  </section>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
 
-  <section id="application-form">
-    <h2>Sign Up to Sublet Your Room!</h2>
-    <form action="mailto:contact@uniroomsublets.com">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="age">Your Age:</label>
-      <input type="number" id="age" name="age" required>
-
-      <label for="number-people">Number of People Living in House:</label>
-      <input type="number" id="number-people" name="number-people" required>
-
-      <label for="location">Location (City, Street):</label>
-      <input type="text" id="location" name="location" required>
-
-      <label for="photo">Upload a Photo of the House:</label>
-      <input type="file" id="photo" name="photo" accept="image/*" required>
-
-      <label for="price">Price (Per Month in USD):</label>
-      <input type="number" id="price" name="price" required>
-
-      <input type="submit" value="Submit">
-    </form>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 UniRoom Sublets. All rights reserved.</p>
+    <p>&copy; 2024 UniRoom Marketplace. All rights reserved.</p>
   </footer>
 </body>
 </html>
