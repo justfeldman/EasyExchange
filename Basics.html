@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exchange Basics</title>
+  <title>UniRoom Country Forums</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -27,6 +27,23 @@
       margin: 0 auto;
     }
 
+    nav {
+      background-color: #00A3E1;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f7c242;
+    }
+
     section {
       padding: 30px;
       max-width: 1000px;
@@ -34,47 +51,28 @@
       text-align: center;
     }
 
-    .topics {
+    .listings {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
 
-    .topic {
+    .listing {
       background-color: #fff;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       width: calc(50% - 20px);
       box-sizing: border-box;
-      text-align: left;
     }
 
-    .topic h3 {
-      font-size: 1.8em;
-      color: #007BFF;
-    }
-
-    .topic p {
-      font-size: 1.2em;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .topic button {
-      background-color: #FF5722;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .topic button:hover {
-      background-color: #E64A19;
+    .listing img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 10px;
     }
 
     footer {
@@ -86,46 +84,107 @@
       bottom: 0;
       width: 100%;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #filter {
+      margin-bottom: 30px;
+    }
+
+    #filter label, #filter input {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .listings {
+        flex-direction: column;
+      }
+
+      .listing {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+    <nav style="margin-top: 20px;">
+      <a href="index.html" style="color: #007BFF; font-size: 1.2em; margin: 0 15px; text-decoration: none;">Home</a>
+      <a href="information.html" style="color: #007BFF; font-size: 1.2em; margin: 0 15px; text-decoration: none;">Information</a>
+      <a href="email.html" style="color: #007BFF; font-size: 1.2em; margin: 0 15px; text-decoration: none;">Email</a>
+      <a href="forums.html" style="color: #007BFF; font-size: 1.2em; margin: 0 15px; text-decoration: none;">Forums</a>
+      <a href="exchange_basics.html" style="color: #007BFF; font-size: 1.2em; margin: 0 15px; text-decoration: none;">Exchange Basics</a>
+    </nav>
   </header>
 
+  <nav>
+    <a href="#sublet-swap">Sublet Swap</a>
+    <a href="#exchange-basics">Exchange Basics</a>
+    <a href="#travel-tips">Travel Tips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
   <section>
-    <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Exchange Basics</h1>
-    <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">Essential information for making your exchange experience smooth and successful.</p>
+    <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Explore Forum Topics</h1>
+    <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">Check out user-generated posts and discussions on exchange topics worldwide.</p>
     
-    <div class="topics">
-      <div class="topic">
-        <h3>Visa Requirements</h3>
-        <p>Learn about the visa process for your exchange destination. Get all the necessary documents and requirements sorted out for a hassle-free experience.</p>
-        <button onclick="window.location.href='VisaDetails.html'">Learn More</button>
+    <div class="forum-topics" style="display: flex; gap: 20px; justify-content: space-between;">
+      <div class="forum-topic" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 30%;">
+        <h3 style="font-size: 1.8em; color: #007BFF;">Housing Tips in Germany</h3>
+        <p style="font-size: 1.2em; color: #555;">Join the discussion on the best places to stay during your exchange in Germany. Share your experiences and read tips from others!</p>
+        <button style="background-color: #FF5722; color: #fff; border: none; padding: 10px 20px; font-size: 1em; border-radius: 5px; cursor: pointer;">Read More</button>
       </div>
-
-      <div class="topic">
-        <h3>Living Arrangements</h3>
-        <p>Find out about housing options, including dorms, shared apartments, and host families. Discover what works best for you during your stay.</p>
-        <button onclick="window.location.href='LivingOptions.html'">Explore Housing</button>
+      <div class="forum-topic" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 30%;">
+        <h3 style="font-size: 1.8em; color: #007BFF;">Visa and Immigration for UK</h3>
+        <p style="font-size: 1.2em; color: #555;">Find the latest information on visas and immigration requirements for studying in the United Kingdom. Contribute and learn from fellow students!</p>
+        <button style="background-color: #FF5722; color: #fff; border: none; padding: 10px 20px; font-size: 1em; border-radius: 5px; cursor: pointer;">Read More</button>
       </div>
-
-      <div class="topic">
-        <h3>Finding a Job</h3>
-        <p>Need extra cash while on exchange? Get tips on finding part-time jobs, internships, or remote work opportunities that fit your schedule.</p>
-        <button onclick="window.location.href='JobOpportunities.html'">Job Opportunities</button>
-      </div>
-
-      <div class="topic">
-        <h3>Community and Social Life</h3>
-        <p>Connecting with others is key to enjoying your exchange. Learn how to join local communities, clubs, and events to make lifelong friends.</p>
-        <button onclick="window.location.href='CommunityEvents.html'">Join a Community</button>
+      <div class="forum-topic" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 30%;">
+        <h3 style="font-size: 1.8em; color: #007BFF;">Cultural Experiences in Australia</h3>
+        <p style="font-size: 1.2em; color: #555;">Share and discover cultural experiences from exchange students in Australia. Explore activities, events, and local favorites!</p>
+        <button style="background-color: #FF5722; color: #fff; border: none; padding: 10px 20px; font-size: 1em; border-radius: 5px; cursor: pointer;">Read More</button>
       </div>
     </div>
   </section>
 
+  
+
   <footer>
-    <p>&copy; 2024 EasyExchange. All rights reserved.</p>
+    <p>&copy; 2024 UniRoom Information. All rights reserved.</p>
   </footer>
 </body>
 </html>
