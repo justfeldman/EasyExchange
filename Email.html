@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UniRoom Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 2em;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: #00A3E1;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f7c242;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .listing {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 20px);
+      box-sizing: border-box;
+    }
+
+    .listing img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #filter {
+      margin-bottom: 30px;
+    }
+
+    #filter label, #filter input {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .listings {
+        flex-direction: column;
+      }
+
+      .listing {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+  </header>
+
+  <nav>
+    <a href="#sublet-swap">Sublet Swap</a>
+    <a href="#exchange-basics">Exchange Basics</a>
+    <a href="#travel-tips">Travel Tips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section>
+    <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Going on exchange but don’t know where to start?</h1>
+    <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">EasyExchange is the perfect place to begin!</p>
+    
+    <button style="background-color: #00A3E1; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='SubletMarketplace.html'">Sublet Market Place</button>
+    <button style="background-color: #4CAF50; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='Referral.html'">Referral</button>
+    <p style="font-size: 1.2em; color: #333; margin-top: 20px;">Join thousands of students who have successfully navigated their exchange with our help. Click the button above to start your journey today and make your exchange experience seamless and stress-free!</p>
+  </section>
+
+  
+
+  <footer>
+    <p>&copy; 2024 UniRoom Information. All rights reserved.</p>
+  </footer>
+</body>
+</html>
