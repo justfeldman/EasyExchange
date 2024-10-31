@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UniRoom Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 2em;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: #00A3E1;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f7c242;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .listing {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 20px);
+      box-sizing: border-box;
+    }
+
+    .listing img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #filter {
+      margin-bottom: 30px;
+    }
+
+    #filter label, #filter input {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .listings {
+        flex-direction: column;
+      }
+
+      .listing {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#listings">Listings</a>
+    <a href="contact.html">List Your Room</a>
+  </nav>
+
+  <section id="filter">
+    <h2>Information</h2>
+    <label for="priceFilter">Max Price ($):</label>
+    <input type="number" id="priceFilter" name="priceFilter">
+
+    <label for="peopleFilter">Number of People in House:</label>
+    <input type="number" id="peopleFilter" name="peopleFilter">
+
+    <button onclick="filterListings()">Apply Filters</button>
+  </section>
+
+  <section id="listings">
+    <h1>Available Rooms</h1>
+    <div class="listings" id="listingsContainer">
+      <div class="listing" data-price="700" data-people="4">
+        <img src="unnamed.jpg" alt="University room available for sublet">
+        <p><strong>Price:</strong> $700/month</p>
+        <p><strong>Number of People Living in House:</strong> 4</p>
+
+        <h3>If You Are Interested</h3>
+        <form action="https://formspree.io/f/xpwzzgzg" method="POST">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="age">Your Age:</label>
+          <input type="number" id="age" name="age" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+      <div class="listing" data-price="750" data-people="3">
+        <img src="Kylesroom.jpg" alt="Another university room available for sublet">
+        <p><strong>Price:</strong> $750/month</p>
+        <p><strong>Number of People Living in House:</strong> 3</p>
+
+        <h3>If You Are Interested</h3>
+        <form action="https://formspree.io/f/xpwzzgzg" method="POST">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="age">Your Age:</label>
+          <input type="number" id="age" name="age" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 UniRoom Marketplace. All rights reserved.</p>
+  </footer>
+</body>
+</html>
