@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Country Forums - EasyExchange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 2em;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .search-bar {
+      margin-bottom: 30px;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 15px;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1.1em;
+    }
+
+    .search-bar button {
+      padding: 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      margin-left: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+
+    .country-list {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .country-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .country-list li {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .country-list li:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+  </header>
+
+  <section>
+    <h2 style="font-size: 2.5em; color: #007BFF; font-weight: bold; margin-bottom: 20px;">Find Your Exchange Community</h2>
+    <p style="font-size: 1.5em; color: #555;">Search for the country you're heading to and connect with others in our forums and group chats.</p>
+    
+    <div class="search-bar">
+      <input type="text" id="countrySearch" name="countrySearch" placeholder="Enter a country...">
+      <button onclick="searchCountry()">Search</button>
+    </div>
+
+    <div class="country-list">
+      <ul>
+        <li onclick="window.location.href='ForumUSA.html'">United States</li>
+        <li onclick="window.location.href='ForumUK.html'">United Kingdom</li>
+        <li onclick="window.location.href='ForumAustralia.html'">Australia</li>
+        <li onclick="window.location.href='ForumCanada.html'">Canada</li>
+        <li onclick="window.location.href='ForumGermany.html'">Germany</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 EasyExchange. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function searchCountry() {
+      var searchInput = document.getElementById("countrySearch").value.toLowerCase();
+      var countryMap = {
+        "united states": "ForumUSA.html",
+        "usa": "ForumUSA.html",
+        "united kingdom": "ForumUK.html",
+        "uk": "ForumUK.html",
+        "australia": "ForumAustralia.html",
+        "canada": "ForumCanada.html",
+        "germany": "ForumGermany.html"
+      };
+      
+      if (countryMap[searchInput]) {
+        window.location.href = countryMap[searchInput];
+      } else {
+        alert("No forum found for the specified country. Please try another.");
+      }
+    }
+  </script>
+</body>
+</html>
