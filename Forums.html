@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Country Forums - EasyExchange</title>
+  <title>UniRoom Information</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -27,64 +27,52 @@
       margin: 0 auto;
     }
 
+    nav {
+      background-color: #00A3E1;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f7c242;
+    }
+
     section {
       padding: 30px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
     }
 
-    .search-bar {
-      margin-bottom: 30px;
+    .listings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
     }
 
-    .search-bar input[type="text"] {
+    .listing {
+      background-color: #fff;
       padding: 15px;
-      width: 70%;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1.1em;
-    }
-
-    .search-bar button {
-      padding: 15px;
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.1em;
-      margin-left: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .search-bar button:hover {
-      background-color: #0056b3;
-    }
-
-    .country-list {
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    .country-list ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .country-list li {
-      background: #fff;
-      padding: 15px;
-      margin: 10px 0;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 20px);
+      box-sizing: border-box;
     }
 
-    .country-list li:hover {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    .listing img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+      border-radius: 10px;
     }
 
     footer {
@@ -96,6 +84,59 @@
       bottom: 0;
       width: 100%;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #filter {
+      margin-bottom: 30px;
+    }
+
+    #filter label, #filter input {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .listings {
+        flex-direction: column;
+      }
+
+      .listing {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -103,49 +144,32 @@
     <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
   </header>
 
-  <section>
-    <h2 style="font-size: 2.5em; color: #007BFF; font-weight: bold; margin-bottom: 20px;">Find Your Exchange Community</h2>
-    <p style="font-size: 1.5em; color: #555;">Search for the country you're heading to and connect with others in our forums and group chats.</p>
-    
-    <div class="search-bar">
-      <input type="text" id="countrySearch" name="countrySearch" placeholder="Enter a country...">
-      <button onclick="searchCountry()">Search</button>
-    </div>
+  <nav>
+    <a href="#sublet-swap">Sublet Swap</a>
+    <a href="#exchange-basics">Exchange Basics</a>
+    <a href="#travel-tips">Travel Tips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
 
-    <div class="country-list">
-      <ul>
-        <li onclick="window.location.href='ForumUSA.html'">United States</li>
-        <li onclick="window.location.href='ForumUK.html'">United Kingdom</li>
-        <li onclick="window.location.href='ForumAustralia.html'">Australia</li>
-        <li onclick="window.location.href='ForumCanada.html'">Canada</li>
-        <li onclick="window.location.href='ForumGermany.html'">Germany</li>
-      </ul>
+  <section>
+    <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Going on exchange but don’t know where to start?</h1>
+    <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">EasyExchange is the perfect place to begin!</p>
+    
+    <button style="background-color: #00A3E1; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='SubletMarketplace.html'">Sublet Market Place</button>
+    <button style="background-color: #4CAF50; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='Referral.html'">Referral</button>
+    <p style="font-size: 1.2em; color: #333; margin-top: 20px;">Join thousands of students who have successfully navigated their exchange with our help. Click the button above to start your journey today and make your exchange experience seamless and stress-free!</p>
+    
+    <div class="referral-bonus" style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);">
+      <h3 style="color: #FF5722;">Earn Rewards for Referrals!</h3>
+      <p style="font-size: 1.2em; color: #555;">Invite your friends to join EasyExchange and earn points for each successful referral. Use these points to unlock exclusive discussion topics, gain special roles, or even win tangible rewards!</p>
+      <button style="background-color: #FF5722; color: #fff; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='ReferralSignup.html'">Start Referring Now</button>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2024 EasyExchange. All rights reserved.</p>
-  </footer>
+  
 
-  <script>
-    function searchCountry() {
-      var searchInput = document.getElementById("countrySearch").value.toLowerCase();
-      var countryMap = {
-        "united states": "ForumUSA.html",
-        "usa": "ForumUSA.html",
-        "united kingdom": "ForumUK.html",
-        "uk": "ForumUK.html",
-        "australia": "ForumAustralia.html",
-        "canada": "ForumCanada.html",
-        "germany": "ForumGermany.html"
-      };
-      
-      if (countryMap[searchInput]) {
-        window.location.href = countryMap[searchInput];
-      } else {
-        alert("No forum found for the specified country. Please try another.");
-      }
-    }
-  </script>
+  <footer>
+    <p>&copy; 2024 UniRoom Information. All rights reserved.</p>
+  </footer>
 </body>
 </html>
