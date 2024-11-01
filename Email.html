@@ -27,31 +27,55 @@
       margin: 0 auto;
     }
 
+    nav {
+      background-color: #00A3E1;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f7c242;
+    }
+
     section {
       padding: 30px;
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
       text-align: center;
     }
 
     .signup {
       background-color: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
       margin-top: 20px;
+      transition: transform 0.3s;
+    }
+
+    .signup:hover {
+      transform: translateY(-10px);
     }
 
     .signup h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       color: #007BFF;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .signup p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #555;
       margin-bottom: 30px;
+      line-height: 1.8;
     }
 
     form {
@@ -64,9 +88,10 @@
     form input[type="email"] {
       padding: 15px;
       margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1.1em;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+      font-size: 1.2em;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     form input[type="submit"] {
@@ -74,43 +99,54 @@
       color: #fff;
       border: none;
       padding: 15px;
-      font-size: 1.2em;
-      border-radius: 10px;
+      font-size: 1.5em;
+      border-radius: 15px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     form input[type="submit"]:hover {
       background-color: #E64A19;
+      transform: translateY(-5px);
     }
 
     .benefits {
-      margin-top: 20px;
-      font-size: 1.1em;
+      margin-top: 40px;
+      font-size: 1.2em;
       color: #333;
       text-align: left;
     }
 
     .benefits ul {
       list-style-type: disc;
-      padding-left: 20px;
+      padding-left: 40px;
+      line-height: 1.8;
     }
 
     .referral-bonus {
-      margin-top: 30px;
-      padding: 20px;
+      margin-top: 40px;
+      padding: 30px;
       background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .referral-bonus:hover {
+      transform: translateY(-5px);
     }
 
     .referral-bonus h3 {
       color: #FF5722;
+      font-size: 2em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     .referral-bonus p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #555;
+      line-height: 1.8;
     }
 
     .referral-bonus button {
@@ -118,26 +154,34 @@
       color: #fff;
       border: none;
       padding: 15px 30px;
-      font-size: 1.2em;
-      border-radius: 10px;
+      font-size: 1.5em;
+      border-radius: 15px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s;
     }
 
     .referral-bonus button:hover {
       background-color: #E64A19;
+      transform: translateY(-5px);
     }
   </style>
 </head>
 <body>
   <header>
     <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="information.html">Information</a>
+      <a href="forums.html">Forums</a>
+      <a href="exchange_basics.html">Exchange Basics</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
   </header>
 
   <section class="signup">
     <h2>Sign Up for EasyExchange</h2>
-    <p>Be the first to get exclusive access to our exchange services and make your journey smooth and stress-free. Join our community now!</p>
+    <p>Join our growing community and get exclusive access to exchange opportunities, expert tips, and special offers to make your exchange experience truly memorable.</p>
     
     <form action="https://formspree.io/f/xpwzzgzg" method="POST">
       <input type="email" id="email" name="email" placeholder="Enter your email address" required>
@@ -147,15 +191,15 @@
     <div class="benefits">
       <h3>Benefits of Signing Up:</h3>
       <ul>
-        <li>Get personalized exchange opportunities directly to your inbox.</li>
-        <li>Receive expert travel tips and exchange guides.</li>
-        <li>Exclusive access to offers and early notifications on room listings.</li>
+        <li>Personalized exchange opportunities delivered directly to your inbox.</li>
+        <li>Expert travel tips, guides, and community support to help you succeed.</li>
+        <li>Exclusive early access to special offers and room listings.</li>
       </ul>
     </div>
     
     <div class="referral-bonus">
       <h3>Earn Rewards for Referrals!</h3>
-      <p>Invite your friends to join EasyExchange and earn points for each successful referral. Use these points to unlock exclusive discussion topics, gain special roles, or even win tangible rewards!</p>
+      <p>Invite your friends to join EasyExchange and earn points for each successful referral. Use these points to unlock exclusive content, gain special roles, and access tangible rewards!</p>
       <button onclick="window.location.href='ReferralSignup.html'">Start Referring Now</button>
     </div>
   </section>
