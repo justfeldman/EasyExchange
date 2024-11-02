@@ -1,169 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>UniRoom Information</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-    header {
-      background-color: #FFFFFF;
-      padding: 2em;
-      text-align: center;
-      position: relative;
-    }
+        .full-screen-image {
+            width: 100%;
+            height: 100vh;
+            background: url('https://github.com/justfeldman/QuickShift/raw/main/Landing%20page%20P.1.png') no-repeat center center/cover;
+            position: relative;
+        }
 
-    header img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+        .clickable-button {
+            position: absolute;
+            top: 70%; /* Adjust the position according to your design */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #ffffff;
+            background-color: rgba(255, 64, 129, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
 
-    nav {
-      background-color: #00A3E1;
-      padding: 1em;
-      text-align: center;
-    }
+        .clickable-button:hover {
+            background-color: rgba(233, 30, 99, 0.8);
+        }
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        /* Additional Styles from UniRoom Information Page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    nav a:hover {
-      color: #f7c242;
-    }
+        header {
+            background-color: #FFFFFF;
+            padding: 2em;
+            text-align: center;
+            position: relative;
+        }
 
-    section {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-    .listings {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
+        nav {
+            background-color: #00A3E1;
+            padding: 1em;
+            text-align: center;
+        }
 
-    .listing {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      width: calc(50% - 20px);
-      box-sizing: border-box;
-    }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .listing img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
+        nav a:hover {
+            color: #f7c242;
+        }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
+        section {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 300px;
-      margin: 20px auto;
-      padding: 15px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-    form label {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+        @media screen and (max-width: 768px) {
+            .listings {
+                flex-direction: column;
+            }
 
-    form input {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    form input[type="submit"] {
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-    }
-
-    form input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-
-    #filter {
-      margin-bottom: 30px;
-    }
-
-    #filter label, #filter input {
-      margin-right: 10px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .listings {
-        flex-direction: column;
-      }
-
-      .listing {
-        width: 100%;
-      }
-    }
-  </style>
+            .listing {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
-  </header>
+    <header>
+        <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
+    </header>
 
-  <nav>
-    <a href="#sublet-swap">Sublet Swap</a>
-    <a href="#exchange-basics">Exchange Basics</a>
-    <a href="#travel-tips">Travel Tips</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+    <nav>
+        <a href="#sublet-swap">Sublet Swap</a>
+        <a href="#exchange-basics">Exchange Basics</a>
+        <a href="#travel-tips">Travel Tips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
 
-  <section>
-    <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Going on exchange but don’t know where to start?</h1>
-    <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">EasyExchange is the perfect place to begin!</p>
-    
-    <button style="background-color: #00A3E1; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='SubletMarketplace.html'">Sublet Market Place</button>
-    <button style="background-color: #4CAF50; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='Referral.html'">Referral</button>
-    <p style="font-size: 1.2em; color: #333; margin-top: 20px;">Join thousands of students who have successfully navigated their exchange with our help. Click the button above to start your journey today and make your exchange experience seamless and stress-free!</p>
-  </section>
+    <section>
+        <h1 style="font-size: 3em; color: #0066CC; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Going on exchange but don’t know where to start?</h1>
+        <p style="font-size: 1.5em; color: #444; font-style: italic; margin-bottom: 20px;">EasyExchange is the perfect place to begin!</p>
+        <button style="background-color: #00A3E1; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='SubletMarketplace.html'">Sublet Market Place</button>
+        <button style="background-color: #4CAF50; color: #fff; border: none; padding: 15px 30px; font-size: 1.3em; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background-color 0.3s ease;" onclick="window.location.href='Referral.html'">Referral</button>
+        <p style="font-size: 1.2em; color: #333; margin-top: 20px;">Join thousands of students who have successfully navigated their exchange with our help. Click the button above to start your journey today and make your exchange experience seamless and stress-free!</p>
+    </section>
 
-  
+    <div class="full-screen-image">
+        <a href="#" class="clickable-button">Learn More</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2024 UniRoom Information. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2024 UniRoom Information. All rights reserved.</p>
+    </footer>
 </body>
 </html>
