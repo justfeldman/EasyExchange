@@ -56,7 +56,7 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      margin-top: 40px;
+      margin-top: 20px;
       width: 100%;
       max-width: 400px;
       text-align: center;
@@ -86,17 +86,23 @@
       padding: 20px;
       text-align: center;
       font-size: 0.9em;
-      position: absolute;
-      bottom: 0;
       width: 100%;
     }
+
+    /* Image Styling */
+    .image-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
-    <img src="IMG_9919.jpg" alt="Western Students 4 Startups Logo">
+    <img src="IMG_8912.jpg" alt="Western Students 4 Startups Top Visual">
     <h2>Western Students 4 Startups</h2>
   </header>
 
@@ -109,12 +115,23 @@
     <a href="contact.html">Contact Us</a>
   </nav>
 
-  <!-- Button Section -->
+  <!-- Button Section with Images -->
   <div class="button-container">
+    <!-- Top Image -->
+    <div class="image-container">
+      <img src="IMG_8912.jpg" alt="Top Visual - IMG_8912">
+    </div>
+
+    <!-- Buttons -->
     <a href="https://justfeldman.github.io/EasyExchange/HomePage.html" target="_blank" class="button">Sublet Swap (Homepage)</a>
     <a href="exchange-basics.html" target="_blank" class="button">Exchange Basics</a>
     <a href="travel-tips.html" target="_blank" class="button">Travel Tips</a>
     <a href="https://justfeldman.github.io/EasyExchange/figma2.html" target="_blank" class="button">Contact Us</a>
+
+    <!-- Bottom Image -->
+    <div class="image-container">
+      <img src="4startups.png" alt="Bottom Visual - 4startups">
+    </div>
   </div>
 
   <!-- Footer -->
