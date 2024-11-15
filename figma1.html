@@ -3,75 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Easy Exchange</title>
+  <title>Western Students 4 Startups - Easy Exchange</title>
   <style>
-    /* Reset default styles */
-    * {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
-    /* Header container */
+    /* Header */
     .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: white;
-      padding: 20px;
+      text-align: center;
+      padding: 30px;
+      background-color: #ffffff;
+      border-bottom: 3px solid #00AEEF;
     }
 
-    /* Logo styling */
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    .header img {
+      height: 100px;
     }
 
-    .logo img {
-      height: 80px; /* Adjust size as needed */
-      margin-bottom: 10px;
-    }
-
-    /* Navigation bar styling */
     .navbar {
-      width: 100%;
       background-color: #00AEEF;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+      padding: 10px;
+      text-align: center;
     }
 
     .navbar a {
       color: white;
-      font-size: 1em;
       font-weight: bold;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 20px;
+      font-size: 1.2em;
     }
 
-    .navbar a:hover {
-      text-decoration: underline;
+    /* Main banner */
+    .banner {
+      padding: 60px 20px;
+      text-align: center;
+      background: #eee;
+    }
+
+    .banner h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    .cta-button {
+      padding: 15px 30px;
+      background-color: #00AEEF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    /* Sections */
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header section -->
+  <!-- Header -->
   <header class="header">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="IMG_8912.jpg" alt="Easy Exchange Logo">
-    </div>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#listings">Listings</a>
-      <a href="#list-room">List Your Room</a>
-      <a href="#sign-up">Sign Up</a>
-    </nav>
+    <img src="IMG_9919.jpg" alt="Western Students 4 Startups Logo">
+    <h2>Western Students 4 Startups</h2>
   </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#apply">Apply Now</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- Main Banner -->
+  <section class="banner">
+    <h1>Easy Exchange Program</h1>
+    <p>Join our network of entrepreneurs today to launch your business or become part of an innovative startup!</p>
+    <a href="#apply" class="cta-button">Apply Now</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Western Students 4 Startups is a community dedicated to fostering innovation and entrepreneurship among students at Western University. Our Easy Exchange program connects students with startup opportunities to gain real-world experience and contribute to innovative projects.</p>
+  </section>
+
+  <!-- Opportunities Section -->
+  <section id="opportunities" class="section">
+    <h2>Opportunities</h2>
+    <p>Explore current opportunities to work with startups, gain hands-on experience, and grow your entrepreneurial skills.</p>
+    <!-- You can add individual job cards here for different positions -->
+  </section>
+
+  <!-- Apply Now Section -->
+  <section id="apply" class="section">
+    <h2>Apply Now</h2>
+    <p>Ready to make an impact? Apply to join the Easy Exchange program and become part of an exciting startup journey!</p>
+    <!-- Link to an application form or embed a form here -->
+    <a href="apply.html" class="cta-button">Apply Here</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Western Students 4 Startups | Contact: info@example.com</p>
+  </footer>
 
 </body>
 </html>
