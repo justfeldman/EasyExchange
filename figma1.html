@@ -5,48 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Western Students 4 Startups - Easy Exchange</title>
   <style>
-    /* Basic Styling */
-    body, * {
+    /* Reset default styles */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    .header, .navbar, .banner, .section, .footer {
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
       text-align: center;
       padding: 20px;
+      background-color: white;
+      border-bottom: 3px solid #00AEEF;
+      width: 100%;
+    }
+
+    .header img {
+      height: 80px;
     }
 
     .navbar {
       background-color: #00AEEF;
+      padding: 10px;
+      text-align: center;
     }
 
-    .navbar a, .marketplace-button, .contact-button {
+    .navbar a {
       color: white;
       font-weight: bold;
+      margin: 0 15px;
       text-decoration: none;
-      background-color: #00AEEF;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin: 5px;
+      font-size: 1.2em;
     }
 
-    .banner, .section, .footer {
-      background-color: #f4f4f4;
-    }
-
-    /* Button Group Styling */
-    .button-group {
+    /* Main Button Container */
+    .button-container {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
     }
 
+    .button {
+      display: inline-block;
+      width: 100%;
+      padding: 15px;
+      background-color: #00AEEF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #008bb5;
+    }
+
+    /* Footer */
     .footer {
       background-color: #333;
       color: #fff;
+      padding: 20px;
+      text-align: center;
       font-size: 0.9em;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -54,7 +96,7 @@
 
   <!-- Header -->
   <header class="header">
-    <img src="IMG_9919.jpg" alt="Western Students 4 Startups Logo" style="height: 100px;">
+    <img src="IMG_9919.jpg" alt="Western Students 4 Startups Logo">
     <h2>Western Students 4 Startups</h2>
   </header>
 
@@ -67,42 +109,12 @@
     <a href="contact.html">Contact Us</a>
   </nav>
 
-  <!-- Main Banner -->
-  <section class="banner">
-    <h1>Easy Exchange Program</h1>
-    <p>Join our network of entrepreneurs today to launch your business or become part of an innovative startup!</p>
-    <a href="#apply" class="marketplace-button">Apply Now</a>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Western Students 4 Startups is a community dedicated to fostering innovation and entrepreneurship among students at Western University. Our Easy Exchange program connects students with startup opportunities to gain real-world experience and contribute to innovative projects.</p>
-  </section>
-
-  <!-- Opportunities Section -->
-  <section id="opportunities" class="section">
-    <h2>Opportunities</h2>
-    <p>Explore current opportunities to work with startups, gain hands-on experience, and grow your entrepreneurial skills.</p>
-    
-    <!-- Button Group: Marketplace & First Contact Us Button -->
-    <div class="button-group">
-      <a href="https://justfeldman.github.io/EasyExchange/HomePage.html" target="_blank" class="marketplace-button">Click here for Marketplace</a>
-      <a href="contact.html" class="contact-button">Contact Us</a>
-    </div>
-  </section>
-
-  <!-- Apply Now Section -->
-  <section id="apply" class="section">
-    <h2>Apply Now</h2>
-    <p>Ready to make an impact? Apply to join the Easy Exchange program and become part of an exciting startup journey!</p>
-    <a href="apply.html" class="marketplace-button">Apply Here</a>
-
-    <!-- Secondary Contact Us Button under Apply Now -->
-    <div style="margin-top: 20px;">
-      <a href="https://justfeldman.github.io/EasyExchange/figma2.html" target="_blank" class="contact-button">Contact Us</a>
-    </div>
-  </section>
+  <!-- Button Section -->
+  <div class="button-container">
+    <a href="https://justfeldman.github.io/EasyExchange/HomePage.html" target="_blank" class="button">Exchange Marketplace</a>
+    <a href="https://justfeldman.github.io/EasyExchange/figma3.html" target="_blank" class="button">Join the Community</a>
+    <a href="https://justfeldman.github.io/EasyExchange/figma2.html" target="_blank" class="button">Contact Us</a>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
