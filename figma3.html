@@ -1,129 +1,45 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Links the CSS file -->
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo"></div> <!-- Placeholder for the logo -->
+    </div>
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
+    <!-- Title and Description -->
+    <div class="content">
+      <h1>Create an account</h1>
+      <p>Enter your email to sign up for Exchange Made Simple</p>
+    </div>
 
-.container {
-  max-width: 375px;
-  width: 100%;
-  text-align: center;
-}
+    <!-- Input Section -->
+    <form class="form">
+      <input type="email" placeholder="email@domain.com" class="input" required>
+      <button type="submit" class="btn-primary">Continue</button>
+    </form>
 
-.header .logo {
-  width: 100px;
-  height: auto;
-  margin: 0 auto;
-}
+    <!-- Divider -->
+    <div class="divider">
+      <span>or</span>
+    </div>
 
-h1 {
-  font-size: 24px;
-  margin: 20px 0 10px;
-}
+    <!-- Social Sign-In Options -->
+    <div class="social-buttons">
+      <button class="btn-secondary">Continue with Google</button>
+      <button class="btn-secondary">Continue with Apple</button>
+    </div>
 
-.description {
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 20px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.input {
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.btn-primary {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #333333;
-}
-
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #666666;
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background-color: #cccccc;
-}
-
-.social-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.btn-secondary {
-  background-color: #f5f5f5;
-  color: #000000;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background-color: #eaeaea;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-}
-
-.footer {
-  font-size: 12px;
-  color: #666666;
-  margin-top: 20px;
-}
-
-.footer a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
+    <!-- Footer -->
+    <p class="footer">
+      By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+    </p>
+  </div>
+</body>
+</html>
